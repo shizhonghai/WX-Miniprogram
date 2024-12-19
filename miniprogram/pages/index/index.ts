@@ -1,18 +1,17 @@
 // index.ts
 // 获取应用实例
 const app = getApp<IAppOption>()
-const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
-
 Component({
   data: {
     motto: 'Hello World',
     userInfo: {
-      avatarUrl: defaultAvatarUrl,
+      avatarUrl: '/assets/images/default-img.png',
       nickName: '',
     },
     hasUserInfo: false,
     canIUseGetUserProfile: wx.canIUse('getUserProfile'),
     canIUseNicknameComp: wx.canIUse('input.type.nickname'),
+    active: 0,
   },
   methods: {
     // 事件处理函数
@@ -21,6 +20,10 @@ Component({
         url: '../logs/logs',
       })
     },
+    onChange(event: any) {
+        // event.detail 的值为当前选中项的索引
+        this.setData({ active: event.detail });
+      },
     onChooseAvatar(e: any) {
       const { avatarUrl } = e.detail
       const { nickName } = this.data.userInfo

@@ -2,7 +2,7 @@
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
     <view class="container">
-        <view class="home-card" bind:tap="navigateToUnitPage">
+        <!-- <view class="home-card" bind:tap="navigateToUnitPage">
             <view><text class="card-title">拼音练习-趣味识字</text></view>
             <view><text class="card-subtitle">根据拼音选择正确的字</text></view>
         </view>
@@ -13,7 +13,7 @@
         <view class="home-card orange-color">
             <view><text class="card-title">拼音发音点读</text></view>
             <view><text class="card-subtitle">声母表，韵母表，整体认读表，声调表</text></view>
-        </view>
+        </view> -->
         <view class="userinfo">
             <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
                 <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
@@ -33,9 +33,14 @@
                 <text class="userinfo-nickname">{{userInfo.nickName}}</text>
             </block>
         </view>
-        <van-button type="primary">Vant 按钮</van-button>
         <view class="usermotto">
             <text class="user-motto">{{motto}}</text>
         </view>
+        <!-- <van-tabbar active="{{ active }}" bind:change="onChange">
+            <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+            <van-tabbar-item icon="search">搜索</van-tabbar-item>
+            <van-tabbar-item icon="setting-o">设置</van-tabbar-item>
+            <van-tabbar-item icon="friends-o">个人中心</van-tabbar-item>
+        </van-tabbar> -->
     </view>
 </scroll-view>

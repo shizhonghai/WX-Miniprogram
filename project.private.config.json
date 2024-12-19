@@ -3,5 +3,6 @@
   "projectname": "WX-Miniprogram",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "3.7.1"
 }

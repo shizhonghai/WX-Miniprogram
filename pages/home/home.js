@@ -30,8 +30,14 @@ Page({
     this.getTabBar().init();
   },
 
-  onLoad() {
+  async onLoad() {
     this.init();
+    // const apiClient = getApp().globalData.apiClient;
+    // try {
+    //   const { data } = await apiClient.get('/user/profile');
+    // } catch (err) {
+    //   console.error(err);
+    // }
   },
 
   onReachBottom() {

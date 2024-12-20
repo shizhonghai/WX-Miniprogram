@@ -128,6 +128,10 @@ Page({
     wx.navigateTo({ url: '/pages/goods/search/index' });
   },
 
+  gotoLive() {
+    wx.navigateTo({ url: '/pages/live/live' });
+  },
+
   navToActivityDetail({ detail }) {
     const { index: promotionID = 0 } = detail || {};
     wx.navigateTo({

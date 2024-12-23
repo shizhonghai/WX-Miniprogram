@@ -72,5 +72,11 @@
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
+  },
+  "plugins": {
+    "ezplayer": {
+      "version": "1.0.0",
+      "provider": "wxf2b3a0262975d8c2"
+    }
   }
 }

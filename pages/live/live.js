@@ -1,66 +1,36 @@
-// pages/live/live.js
+//index.js
+//获取应用实例
+const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
+  onLoad: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
+  onShow(options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  handleError(e) {
+    console.log('e.detaile.detaile.detail', e.detail);
+    if (e.detail) {
+      const { msg } = e.detail;
+      // do something
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {
-
-  }
-})
+  onShareAppMessage: function () { },
+  error(e) {
+    console.log('live-player', e);
+    console.error('live-player error:', e.detail.errMsg)
+    if (e.detail.errCode == 10001) {
+      wx.showToast({
+        title: '视频直播对讲需要你手机授权微信录音或麦克风权限',
+        icon: 'none',
+        duration: 3000
+      });
+    }
+  },
+});

@@ -1,1 +1,8 @@
-/* pages/live/live.wxss */
+.page-preview {
+  background: #cccccc;
+}
+
+
+.hidden {
+  display: none!important;
+}

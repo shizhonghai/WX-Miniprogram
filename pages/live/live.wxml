@@ -1,2 +1,14 @@
-<!--pages/live/live.wxml-->
-<text>pages/live/live.wxml</text>
+<view class="page-preview">
+  <ezplayer
+    id="ezplayer1"
+    accessToken="at.6gwxk8hv5l1o9s4i58nm8u8rddm3f3ax-9gwn7chf7m-15al0ce-wauckinkx"
+    url="ezopen://open.ys7.com/K52644610/1/live"
+    plugins="talk,voice,capture,ptz,privacy,mirror,capture"
+    recPlayTime="16:06:00"
+    width="100%"
+    height="300"
+    watermark=""
+    themeData="{'poster':'','controls':{'muteBtn':false,'fullScreenBtn':false,'hdBtn':true}}"
+    bind:handleError="handleError"
+  />
+</view>

@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "直播"
+  "navigationBarTitleText": "直播",
+  "usingComponents": {
+    "ezplayer": "plugin://ezplayer/ezplayer"
+  }
 }
